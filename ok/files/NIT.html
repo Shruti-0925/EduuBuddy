@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>NIT List</title>
+    <style>
+        body,html{
+            margin:0px;
+        }
+		#moreText {
+			display: none;
+		}
+
+		.block {
+			display: inline-block;
+			margin: 2%;
+			width: 20%;
+			height: 10%;
+			text-align: center;
+			font-weight: bold;
+			color: rgb(94, 94, 221);
+		}
+
+		.img {
+			width: 90%;
+			height: 86%;
+		}
+
+		#textButton {
+			font-weight: bold;
+		}
+
+		#textButtonNIT {
+			font-weight: bold;
+		}
+
+		#moreTextNIT {
+			display: none;
+		}
+
+		.titless {
+			text-align: center;
+		}
+
+		h2{
+			font-weight:bold;
+		}
+
+		.round{
+			background-color: blue;
+			border-radius: 15%;
+		}
+
+		.bg-gray-100{
+			background-color: #B9E93D;
+		}
+    </style>
+   
+</head>
+<body>
+    
+    <header
+    class="text-gray-600 body-font"
+    style="background-color: cornflowerblue">
+    <div
+      class="container mx-auto flex flex-wrap flex-row md:flex-row items-center justify-between"
+    >
+      <div style="padding-left: 60px; padding-top: 5px;">
+          <a
+          href="files/index.html"
+          class="flex title-font font-medium items-center text-gray-900 md:mb-0"
+        >
+          <img
+            src="../IIT/eduubuddy logo.png"
+            class="w-14 h-12 rounded-full"
+          />
+          <span class="ml-3 text"
+            >Welcome to<br />
+            <h2>EduuBuddy</h2></span
+          >
+        </a>
+      </div>
+    
+      <div class="dropdown">
+        <button
+          class="btn btn-icon"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25px"
+            height="25"
+            fill="CurrentColor"
+            class="bi bi-filter-square transparent"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+            />
+            <path
+              d="M6 11.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+            />
+          </svg>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="files/iit.html">IIT</a>
+          <a class="dropdown-item" href="files/nit.html">NIT</a>
+          <a class="dropdown-item" href="#">About us</a>
+          <a class="dropdown-item" href="#">Contact us</a>
+        </div>
+      </div>
+
+      <nav
+        class="md:ml-auto flex flex-wrap items-center text-base justify-center"
+      >
+        <a href="../index.html" class="mr-5 hover:text-gray-900"> Home</a>
+        <a
+          target="_blank"
+          href="files/iit.html"
+          class="mr-5 hover:text-gray-900"
+          >IITians</a
+        >
+        <a
+          target="_blank"
+          href="files/nit.html"
+          class="mr-5 hover:text-gray-900"
+          >NITians</a
+        >
+        <a href="#Aboutus" class="mr-5 hover:text-gray-900">About Us</a>
+      </nav>
+      <button
+        class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
+        onclick="window.location.href='https://web.whatsapp.com/send?phone=918505092662';"
+      >
+        Contact Us
+        <svg
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          class="w-4 h-4 ml-1"
+          viewBox="0 0 24 24"
+        >
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+
+    <div id="nit">
+        <h2 class="titless" style="background-color: cadetblue;">National Institute of Technology (NIT)</h2>
+        <div class='block'><a
+        href="https://api.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Agartala"
+        target="_blank"><img src="/ok/NIT/Agartala.png" class="img"></a> <br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT Agartala</button></div>
+        <div class='block'><a
+        href="https://web.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Andhra Pradesh"
+        target="_blank"><img src="/ok/NIT/NIT_Andhra_Pradesh.png" class="img"></a><br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT Andhra
+        Pradesh</button></div>
+        <div class='block'><a
+        href="https://web.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Arunachal Pradesh"
+        target="_blank"><img src="/ok/NIT/Arunachal_Pradesh_Logo.png" class="img"></a><br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT Arunachal
+        Pradesh</button></div>
+        <div class='block'><a
+        href="https://web.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Calicut"
+        target="_blank"><img src="/ok/NIT/Calicut_Logo.png" class="img"></a><br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT Calicut</button></div>
+        <hr>
+        <div class='block'><a
+        href="https://web.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Delhi"
+        target="_blank"><img src="/ok/NIT/NIT-Delhi_Logo.png" class="img"></a><br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT Delhi</button></div>
+        <div class='block'><a
+        href="https://web.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Durgapur"
+        target="_blank"><img src="/ok/NIT/NIT_Durgapur_Logo.png" class="img"></a><br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT Durgapur</button></div>
+        <div class='block'><a
+        href="https://web.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Goa"
+        target="_blank"><img src="/ok/NIT/NIT_Goa_logo.png" class="img"></a> <br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT Goa</button></div>
+        <div class='block'><a
+        href="https://web.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Hamirpur"
+        target="_blank"><img src="/ok/NIT/Hamirpur.png" class="img"></a> <br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT Hamirpur</button></div>
+        
+        <span id="pointsNIT">...</span>
+        <div id="moreTextNIT">
+        <div class='block'><a
+            href="https://api.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Jaipur"
+            target="_blank"><img src="/ok/NIT/Jaipur.png" class="img"></a> <br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT Jaipur</button></div>
+        <div class='block'><a
+            href="https://web.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Jalandhar"
+            target="_blank"><img src="/ok/NIT/NIT_Jalandhar.png" class="img"></a><br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT Jalandhar</button>
+        </div>
+        <div class='block'><a
+            href="https://web.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Jamshedpur"
+            target="_blank"><img src="/ok/NIT/Jamshedpur_Logo.png" class="img"></a><br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT Jamshedpur</button>
+        </div>
+        <hr>
+        <div class='block'><a
+            href="https://web.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Karnataka"
+            target="_blank"><img src="/ok/NIT/Kurukshetra_Logo.png" class="img"></a><br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT Karnataka</button>
+        </div>
+        <div class='block'><a
+            href="https://web.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Kurukshetra"
+            target="_blank"><img src="/ok/NIT/Kurukshetra_Logo.png" class="img"></a><br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT Kurukshetra</button>
+        </div>
+        <div class='block'><a
+            href="https://web.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Manipur"
+            target="_blank"><img src="/ok/NIT/Manipur_logo.png" class="img"></a><br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT Manipur</button></div>
+        <div class='block'><a
+            href="https://web.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Meghalaya"
+            target="_blank"><img src="/ok/NIT/Meghalaya_logo.png" class="img"></a> <br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT Meghalaya</button>
+        </div>
+        <hr>
+        <div class='block'><a
+            href="https://web.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Mizoram"
+            target="_blank"><img src="/ok/NIT/Mizoram_logo.png" class="img"></a> <br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT Mizoram</button></div>
+        <div class='block'><a
+            href="https://api.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Nagaland"
+            target="_blank"><img src="/ok/NIT/Nagaland_Logo.png" class="img"></a> <br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT Nagaland
+        </div>
+        <div class='block'><a
+            href="https://web.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Nagpur"
+            target="_blank"><img src="/ok/NIT/Nagpur.jpeg" class="img"></a><br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT Nagpur</div>
+        <div class='block'><a
+            href="https://web.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Allahabad"
+            target="_blank"><img src="/ok/NIT/nitallahabad.png" class="img"></a><br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT Allahabad</div>
+        <div class='block'><a
+            href="https://web.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Bhopal"
+            target="_blank"><img src="/ok/NIT/nitbhopal.png" class="img"></a><br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT Bhopal</div>
+        <div class='block'><a
+            href="https://web.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Patna"
+            target="_blank"><img src="/ok/NIT/Patna_Logo.png" class="img"></a><br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT Patna</div>
+        <div class='block'><a
+            href="https://web.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Puducherry"
+            target="_blank"><img src="/ok/NIT/NIT_Puducherry_Official_logo.png" class="img"></a><br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT
+        Puducherry</div>
+        <div class='block'><a
+            href="https://web.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Raipur"
+            target="_blank"><img src="/ok/NIT/Raipur_Logo.png" class="img"></a> <br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT Raipur</div>
+        <div class='block'><a
+            href="https://web.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Rourkela"
+            target="_blank"><img src="/ok/NIT/NIT_Rourkela_Colour_Logo.svg.png" class="img"></a><br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT
+        Rourkela</div>
+        <div class='block'><a
+            href="https://web.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Sikkim"
+            target="_blank"><img src="/ok/nit/Sikkim.svg" class="img"></a><br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT Sikkim</div>
+        <div class='block'><a
+            href="https://web.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Silchar"
+            target="_blank"><img src="/ok/NIT/NIT_Silchar_logo.png" class="img"></a><br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT Silchar
+        </div>
+        <div class='block'><a
+            href="https://web.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Srinagar"
+            target="_blank"><img src="/ok/NIT/Srinagar.png" class="img"></a> <br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT Srinagar</div>
+        <div class='block'><a
+            href="https://web.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Surat"
+            target="_blank"><img src="/ok/NIT/NIT_Surat_Logo.svg" class="img"></a> <br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT Surat</div>
+        <div class='block'><a
+            href="https://api.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Tiruchirappali"
+            target="_blank"><img src="/ok/NIT/Trichy_Logo.png" class="img"></a> <br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT Tiruchirappali
+        </div>
+        <div class='block'><a
+            href="https://web.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Uttarakhand"
+            target="_blank"><img src="/ok/NIT/uttarakhand.jpg" class="img"></a><br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT Uttarakhand
+        </div>
+        <div class='block'><a
+            href="https://web.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from NIT Warangal"
+            target="_blank"><img src="/ok/NIT/Warangal_logo.png" class="img"></a><br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >NIT Warangal</div>
+        </div>
+        <br />
+        <p onclick="toggleTextNIT()" id="textButtonNIT">
+        Show More...
+        <br />
+        <br />
+        <br />
+        
+        </p>
+</body>
+</html>

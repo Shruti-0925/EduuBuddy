@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <title>IIT List</title>
+    <style>
+      .centertext {
+        text-align: center;
+        font-size: 18px;
+        background-color: #1dd1a1;
+        font-weight: bold;
+        font-style: italic;
+        padding-top: 74px;
+        padding-left: 8px;
+        position: fixed;
+        width: 100%;
+        z-index: 0;
+      }
+      body{
+        margin-top:160px;
+        background-color: #e4f2f7;
+      }
+      
+      body,
+      html {
+        margin: 0px;
+        padding: 0px;
+      }
+      header{
+        position: fixed;
+        width: 100%;
+        z-index: 2;
+      }
+      header nav a{
+        color: rgb(233, 230, 224);
+        transition: all 0.3s ease-in-out;
+        text-decoration: none;
+        font-size: 20px;
+      }
+      
+      header nav a:hover{
+        color: rgb(191, 143, 236);
+      }
+
+      #moreText {
+        display: none;
+      }
+
+      .block {
+        display: inline-block;
+        margin: 2%;
+        width: 20%;
+        height: 10%;
+        text-align: center;
+        font-weight: bold;
+        color: rgb(94, 94, 221);
+      }
+
+      .img {
+        width: 10%;
+        height: 86%;
+      }
+
+      #textButton {
+        font-weight: bold;
+      }
+
+      #textButtonNIT {
+        font-weight: bold;
+      }
+
+      #moreTextNIT {
+        display: none;
+      }
+
+      .titless {
+        text-align: center;
+      }
+
+      h2 {
+        font-weight: bold;
+      }
+
+      .card_box{
+        width: 21%;
+        border: 2px ridge #aaa;
+        border-radius: 20px;
+        padding: 10px;
+        margin: 20px 10px;
+        background-color: white;
+        /* flex-grow: 1; */
+      }
+      @media only screen and (max-width: 900px) {
+      .card_box {
+            width: 40%;
+          }
+      }
+
+      .round {
+        background-color: blue;
+        border-radius: 15%;
+      }
+
+      .dropdown-menu {
+        left: -110% !important;
+      }
+
+      .bg-gray-100 {
+        background-color: #b9e93d;
+      }
+
+      .dropdown-item:hover {
+        background-color: green;
+      }
+
+      .btn-icon {
+        color: #fff;
+      }
+
+      @media screen and (min-width: 1000px) {
+        .dropdown {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 1000px) {
+        nav{
+          display: none!important;
+        }
+        .inline-flex {
+          display: none;
+        }
+
+        .w-14 {
+          position: absolute;
+          left: 5%;
+        }
+
+        .ml-3 {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+  <header
+    class="text-gray-600 body-font"
+    style="background-color: cornflowerblue">
+    <div
+      class="container mx-auto flex flex-wrap flex-row md:flex-row items-center justify-between"
+    >
+      <div style="padding-left: 60px; padding-top: 5px;">
+          <a
+          href="files/index.html"
+          class="flex title-font font-medium items-center text-gray-900 md:mb-0"
+        >
+          <img
+            src="../IIT/eduubuddy logo.png"
+            class="w-14 h-12 rounded-full"
+          />
+          <span class="ml-3 text"
+            >Welcome to<br />
+            <h2>EduuBuddy</h2></span
+          >
+        </a>
+      </div>
+    
+      <div class="dropdown">
+        <button
+          class="btn btn-icon"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25px"
+            height="25"
+            fill="CurrentColor"
+            class="bi bi-filter-square transparent"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+            />
+            <path
+              d="M6 11.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+            />
+          </svg>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="files/iit.html">IIT</a>
+          <a class="dropdown-item" href="files/nit.html">NIT</a>
+          <a class="dropdown-item" href="#">About us</a>
+          <a class="dropdown-item" href="#">Contact us</a>
+        </div>
+      </div>
+
+      <nav
+        class="md:ml-auto flex flex-wrap items-center text-base justify-center"
+      >
+        <a href="../index.html" class="mr-5 hover:text-gray-900"> Home</a>
+        <a
+          target="_blank"
+          href="files/iit.html"
+          class="mr-5 hover:text-gray-900"
+          >IITians</a
+        >
+        <a
+          target="_blank"
+          href="files/nit.html"
+          class="mr-5 hover:text-gray-900"
+          >NITians</a
+        >
+        <a href="#Aboutus" class="mr-5 hover:text-gray-900">About Us</a>
+      </nav>
+      <button
+        class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
+        onclick="window.location.href='https://web.whatsapp.com/send?phone=918505092662';"
+      >
+        Contact Us
+        <svg
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          class="w-4 h-4 ml-1"
+          viewBox="0 0 24 24"
+        >
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+    <div class="centertext">Connect with IITians Now! <br /></div>
+    <br />
+    <div style="margin-top: 100px;" class=" container flex flex-wrap flex-row justify-around">
+      <div class="card_box">
+        <a href="https://www.google.com"
+          ><img
+            class="card-img-top .img"
+            src="../IIT/iitBombay.svg"
+            alt="card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="#" class="btn btn-primary btn-block">link</a></small
+          >
+        </div>
+      </div>
+
+      <div class="card_box">
+        <a href="https://www.google.com"
+          ><img
+            class="card-img-top .img"
+            src="../IIT/iitBombay.svg"
+            alt="card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="#" class="btn btn-primary btn-block">link</a></small
+          >
+        </div>
+      </div>
+      <div class="card_box">
+        <a href="https://www.google.com"
+          ><img
+            class="card-img-top .img"
+            src="../IIT/iitBombay.svg"
+            alt="card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="#" class="btn btn-primary btn-block">link</a></small
+          >
+        </div>
+      </div>
+      <div class="card_box">
+        <a href="https://www.google.com"
+          ><img
+            class="card-img-top .img"
+            src="../IIT/iitBombay.svg"
+            alt="card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="#" class="btn btn-primary btn-block">link</a></small
+          >
+        </div>
+      </div>
+    <!-- </div>
+    <br />
+
+    <div class="flex flex-wrap flex-row justify-around"> -->
+      <div class="card_box">
+        <a href="https://www.google.com"
+          ><img
+            class="card-img-top .img"
+            src="../IIT/iitBombay.svg"
+            alt="card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="#" class="btn btn-primary btn-block">link</a></small
+          >
+        </div>
+      </div>
+
+      <div class="card_box">
+        <a href="https://www.google.com"
+          ><img
+            class="card-img-top .img"
+            src="../IIT/iitBombay.svg"
+            alt="card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="#" class="btn btn-primary btn-block">link</a></small
+          >
+        </div>
+      </div>
+      <div class="card_box">
+        <a href="https://www.google.com"
+          ><img
+            class="card-img-top .img"
+            src="../IIT/iitBombay.svg"
+            alt="card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="#" class="btn btn-primary btn-block">link</a></small
+          >
+        </div>
+      </div>
+      <div class="card_box">
+        <a href="https://www.google.com"
+          ><img
+            class="card-img-top .img"
+            src="../IIT/iitBombay.svg"
+            alt="card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="#" class="btn btn-primary btn-block">link</a></small
+          >
+        </div>
+      </div>
+    <!-- </div>
+    <br />
+
+    <div class="flex flex-wrap flex-row justify-around"> -->
+      <div class="card_box">
+        <a href="https://www.google.com"
+          ><img
+            class="card-img-top .img"
+            src="../IIT/iitBombay.svg"
+            alt="card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="#" class="btn btn-primary btn-block">link</a></small
+          >
+        </div>
+      </div>
+
+      <div class="card_box">
+        <a href="https://www.google.com"
+          ><img
+            class="card-img-top .img"
+            src="../IIT/iitBombay.svg"
+            alt="card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="#" class="btn btn-primary btn-block">link</a></small
+          >
+        </div>
+      </div>
+      <div class="card_box">
+        <a href="https://www.google.com"
+          ><img
+            class="card-img-top .img"
+            src="../IIT/iitBombay.svg"
+            alt="card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="#" class="btn btn-primary btn-block">link</a></small
+          >
+        </div>
+      </div>
+      <div class="card_box">
+        <a href="https://www.google.com"
+          ><img
+            class="card-img-top .img"
+            src="../IIT/iitBombay.svg"
+            alt="card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="#" class="btn btn-primary btn-block">link</a></small
+          >
+        </div>
+      </div>
+    <!-- </div>
+    <br />
+
+    <div class="flex flex-wrap flex-row justify-around"> -->
+      <div class="card_box">
+        <a href="https://www.google.com"
+          ><img
+            class="card-img-top .img"
+            src="../IIT/iitBombay.svg"
+            alt="card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="#" class="btn btn-primary btn-block">link</a></small
+          >
+        </div>
+      </div>
+
+      <div class="card_box">
+        <a href="https://www.google.com"
+          ><img
+            class="card-img-top .img"
+            src="../IIT/iitBombay.svg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="#" class="btn btn-primary btn-block">link</a></small
+          >
+        </div>
+      </div>
+      <div class="card_box">
+        <a href="https://www.google.com"
+          ><img
+            class="card-img-top .img"
+            src="../IIT/iitBombay.svg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="#" class="btn btn-primary btn-block">link</a></small
+          >
+        </div>
+      </div>
+      <div class="card_box">
+        <a href="https://www.google.com"
+          ><img
+            class="card-img-top .img"
+            src="../IIT/iitBombay.svg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="#" class="btn btn-primary btn-block">link</a></small
+          >
+        </div>
+      </div>
+    <!-- </div>
+    <br />
+
+    <div class="flex flex-wrap flex-row justify-around"> -->
+      <div class="card_box">
+        <a href="https://www.google.com"
+          ><img
+            class="card-img-top .img"
+            src="../IIT/iitBombay.svg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="#" class="btn btn-primary btn-block">link</a></small
+          >
+        </div>
+      </div>
+
+      <div class="card_box">
+        <a href="https://www.google.com"
+          ><img
+            class="card-img-top .img"
+            src="../IIT/iitBombay.svg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="#" class="btn btn-primary btn-block">link</a></small
+          >
+        </div>
+      </div>
+      <div class="card_box">
+        <a href="https://www.google.com"
+          ><img
+            class="card-img-top .img"
+            src="../IIT/iitBombay.svg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="#" class="btn btn-primary btn-block">link</a></small
+          >
+        </div>
+      </div>
+      <div class="card_box">
+        <a href="https://www.google.com"
+          ><img
+            class="card-img-top .img"
+            src="../IIT/iitBombay.svg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="#" class="btn btn-primary btn-block">link</a></small
+          >
+        </div>
+      </div>
+    <!-- </div>
+    <br />
+
+    <div class="flex flex-wrap flex-row justify-around"> -->
+      <div class="card_box">
+        <a href="https://www.google.com"
+          ><img
+            class="card-img-top .img"
+            src="../IIT/iitBombay.svg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="#" class="btn btn-primary btn-block">link</a></small
+          >
+        </div>
+      </div>
+
+      <div class="card_box">
+        <a href="https://www.google.com"
+          ><img
+            class="card-img-top .img"
+            src="../IIT/iitBombay.svg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="#" class="btn btn-primary btn-block">link</a></small
+          >
+        </div>
+      </div>
+      <div class="card_box">
+        <a href="https://www.google.com"
+          ><img
+            class="card-img-top .img"
+            src="../IIT/iitBombay.svg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="#" class="btn btn-primary btn-block">link</a></small
+          >
+        </div>
+      </div>
+      <div class="card_box">
+        <a href="https://www.google.com"
+          ><img
+            class="card-img-top .img"
+            src="../IIT/iitBombay.svg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="#" class="btn btn-primary btn-block">link</a></small
+          >
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <h2 class="titless" style="background-color: cadetblue">
+      Our Achievements
+    </h2>
+    <section class="text-gray-600 body-font">
+      <div id="Aboutus" class="container px-5 py-24 mx-auto">
+        <div class="flex flex-wrap -m-4 text-center">
+          <div class="p-4 sm:w-1/4 w-1/2">
+            <h2
+              class="title-font font-medium sm:text-4xl text-3xl text-gray-900"
+            >
+              200+
+            </h2>
+            <p class="leading-relaxed">IITians</p>
+          </div>
+          <div class="p-4 sm:w-1/4 w-1/2">
+            <h2
+              class="title-font font-medium sm:text-4xl text-3xl text-gray-900"
+            >
+              330+
+            </h2>
+            <p class="leading-relaxed">NITians</p>
+          </div>
+          <div class="p-4 sm:w-1/4 w-1/2">
+            <h2
+              class="title-font font-medium sm:text-4xl text-3xl text-gray-900"
+            >
+              3K+
+            </h2>
+            <p class="leading-relaxed">Customers</p>
+          </div>
+          <div class="p-4 sm:w-1/4 w-1/2">
+            <h2
+              class="title-font font-medium sm:text-4xl text-3xl text-gray-900"
+            ></h2>
+            <br />
+            <br />
+
+            <p class="leading-relaxed">More to come...</p>
+          </div>
+        </div>
+      </div>
+      <hr />
+    </section>
+    <footer class="text-gray-600 body-font">
+      <div
+        class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col"
+      >
+        <a
+          class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+        >
+          <img
+            src="/IIT/eduubuddy logo.png"
+            class="w-14 h-12 rounded-full"
+          />
+          <span class="ml-3 text-xl">EduuBuddy</span>
+        </a>
+        <p
+          class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"
+        >
+          © 2022 EduuBuddy —
+          <a
+            href="https://twitter.com/knyttneve"
+            class="text-gray-600 ml-1"
+            rel="noopener noreferrer"
+            target="_blank"
+            >@Founders of EduuBuddy</a
+          >
+        </p>
+        <span
+          class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start"
+        >
+          <a class="text-gray-500">
+            <svg
+              fill="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+              ></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            <svg
+              fill="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+              ></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+            >
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path
+                d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
+              ></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            <svg
+              fill="currentColor"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="0"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="none"
+                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+              ></path>
+              <circle cx="4" cy="4" r="2" stroke="none"></circle>
+            </svg>
+          </a>
+        </span>
+      </div>
+    </footer>
+
+    <!--     
+    <div class='block'><a href="https://api.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from IIT Madras"
+    target="_blank"><img src="/IIT/IIT_Madras_Logo.svg" class="img"> </a><br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >IIT Madras</button></div>
+    -->
+  </body>
+</html>
