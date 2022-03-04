@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <title>IIT List</title>
+    <style>
+      .centertext {
+        text-align: center;
+        font-size: 18px;
+        background-color: #1dd1a1;
+        font-weight: bold;
+        font-style: italic;
+        padding-top: 74px;
+        padding-left: 8px;
+        position: fixed;
+        width: 100%;
+        z-index: 0;
+      }
+      body{
+        margin-top:160px;
+        background-color: #e4f2f7;
+      }
+      
+      body,
+      html {
+        margin: 0px;
+        padding: 0px;
+      }
+      header{
+        position: fixed;
+        width: 100%;
+        z-index: 2;
+      }
+      header nav a{
+        color: rgb(233, 230, 224);
+        transition: all 0.3s ease-in-out;
+        text-decoration: none;
+        font-size: 20px;
+      }
+
+      .removecolor:hover{
+      color:#1A202C;
+      text-decoration: none;
+    }
+      
+      header nav a:hover{
+        color: rgb(191, 143, 236);
+      }
+
+      #moreText {
+        display: none;
+      }
+
+      .block {
+        display: inline-block;
+        margin: 2%;
+        width: 20%;
+        height: 10%;
+        text-align: center;
+        font-weight: bold;
+        color: rgb(94, 94, 221);
+      }
+
+      .img {
+        width: 10%;
+        height: 86%;
+      }
+
+      #textButton {
+        font-weight: bold;
+      }
+
+      #textButtonNIT {
+        font-weight: bold;
+      }
+
+      #moreTextNIT {
+        display: none;
+      }
+
+      .titless {
+        text-align: center;
+      }
+
+      h2 {
+        font-weight: bold;
+      }
+
+      .card_box{
+        width: 21%;
+        border: 2px ridge #aaa;
+        border-radius: 20px;
+        padding: 10px;
+        margin: 20px 10px;
+        background-color: white;
+        /* flex-grow: 1; */
+      }
+      @media only screen and (max-width: 900px) {
+      .card_box {
+            width: 40%;
+          }
+      }
+
+      .round {
+        background-color: blue;
+        border-radius: 15%;
+      }
+
+      .dropdown-menu {
+        left: -110% !important;
+      }
+
+      .bg-gray-100 {
+        background-color: #b9e93d;
+      }
+
+      .dropdown-item:hover {
+        background-color: green;
+      }
+
+      .btn-icon {
+        color: #fff;
+      }
+      .mt-4{
+      margin-top:0rem !important;;
+    }
+
+    .py-24{
+      padding-top:2rem !important;
+    }
+
+      @media screen and (min-width: 1000px) {
+        .dropdown {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 1000px) {
+        nav{
+          display: none!important;
+        }
+        .inline-flex {
+          display: none;
+        }
+
+        .w-14 {
+          position: absolute;
+          left: 5%;
+        }
+
+        .ml-3 {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+  <header
+    class="text-gray-600 body-font"
+    style="background-color: cornflowerblue">
+    <div
+      class="container mx-auto flex flex-wrap flex-row md:flex-row items-center justify-between"
+    >
+      <div style="padding-left: 60px; padding-top: 5px;">
+          <a
+          href="./index.html"
+          class="flex title-font font-medium items-center text-gray-900 md:mb-0 removecolor"
+        >
+          <img
+            src="./images/IIT/eduubuddy logo.png"
+            class="w-14 h-12 rounded-full"
+          />
+          <span class="ml-3 text"
+            >Welcome to<br />
+            <h2>EduuBuddy</h2></span
+          >
+        </a>
+      </div>
+    
+      <div class="dropdown">
+        <button
+          class="btn btn-icon"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25px"
+            height="25"
+            fill="CurrentColor"
+            class="bi bi-filter-square transparent"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+            />
+            <path
+              d="M6 11.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+            />
+          </svg>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="./iit.html">IITians</a>
+          <a class="dropdown-item" href="./nit.html">NITians</a>
+          <a class="dropdown-item" href="#">About us</a>
+          <a class="dropdown-item" href="#">Contact us</a>
+        </div>
+      </div>
+
+      <nav
+        class="md:ml-auto flex flex-wrap items-center text-base justify-center"
+      >
+        <a href="./index.html" class="mr-5 hover:text-gray-900"> Home</a>
+        <a
+          target="_blank"
+          href="./IIT.html"
+          class="mr-5 hover:text-gray-900"
+          >IITians</a
+        >
+        <a
+          target="_blank"
+          href="./NIT.html"
+          class="mr-5 hover:text-gray-900"
+          >NITians</a
+        >
+        <a
+          target="_blank"
+          href="./other.html"
+          class="mr-5 hover:text-gray-900 navbaratag"
+          >Others</a
+        >
+        <a href="#AboutUs" class="mr-5 hover:text-gray-900">About Us</a>
+      </nav>
+      <button
+        class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0 positioncontact"
+        onclick="window.location.href='https://web.whatsapp.com/send?phone=918505092662';"
+      >
+        Contact Us
+        <svg
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          class="w-4 h-4 ml-1"
+          viewBox="0 0 24 24"
+        >
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+    <div class="centertext">Connect with them Now! <br /></div>
+    <br />
+    <div style="margin-top: 100px;" class=" container flex flex-wrap flex-row justify-around">
+    <div class="card_box">
+      <a href="https://api.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from BITS Pilani" target="_blank"
+        ><img
+          class="card-img-top .img"
+          src="./images/Other/Bits_Pilani.jpeg"
+          alt="Card image cap"
+      /></a>
+      <div class="card-body">
+        <!-- <h5 class="card-title">Card title</h5> -->
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">
+          <a href="https://api.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from BITS Pilani" target="_blank" class="btn btn-primary btn-block">BITS Pilani</a></small
+          >
+        </div>
+      </div>
+      <div class="card_box">
+        <a href="https://api.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from BITS Hyderabad" target="_blank"
+          ><img
+            class="card-img-top .img"
+            src="./images/Other/Bits_Hyderabad.jpeg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="https://api.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from BITS Hyderabad" target="_blank" class="btn btn-primary btn-block">BITS Hyderabad</a></small
+          >
+        </div>
+      </div>
+      
+    <!-- </div>
+    <br />
+
+    <div class="flex flex-wrap flex-row justify-around"> -->
+      <div class="card_box">
+        <a href="https://api.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from BITS Goa" target="_blank"
+          ><img
+            class="card-img-top .img"
+            src="./images/Other/Bits_Goa.jpeg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="https://api.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from BITS Goa" target="_blank" class="btn btn-primary btn-block"> BITS Goa</a></small
+          >
+        </div>
+      </div>
+
+      <div class="card_box">
+        <a href="https://api.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from VIT Vellore" target="_blank"
+          ><img
+            class="card-img-top .img"
+            src="./images/Other/VIT_Vellore.jpeg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="https://api.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from VIT Vellore" target="_blank" class="btn btn-primary btn-block">VIT Vellore</a></small
+          >
+        </div>
+      </div>
+      <div class="card_box">
+        <a href="https://api.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from IIIT Hyderabad" target="_blank"
+          ><img
+            class="card-img-top .img"
+            src="./images/Other/iiith.png"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="https://api.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from IIIT Hyderabad" target="_blank" class="btn btn-primary btn-block"> IIIT Hyderabad</a></small
+          >
+        </div>
+      </div>
+      <div class="card_box">
+        <a href="https://api.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from IIIT Allahabad" target="_blank"
+          ><img
+            class="card-img-top .img"
+            src="./images/Other/iiith_allahabad.jpg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="https://api.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from IIIT Allahabad" target="_blank" class="btn btn-primary btn-block"> IIIT Allahbad</a></small
+          >
+        </div>
+      </div>
+    <!-- </div>
+    <br />
+
+    <div class="flex flex-wrap flex-row justify-around"> -->
+      <div class="card_box">
+        <a href="https://api.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from Punjab Engineering College(PEC)" target="_blank"
+          ><img
+            class="card-img-top .img"
+            src="./images/Other/pec.jpg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="https://api.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from Punjab Engineering College(PEC)" target="_blank" class="btn btn-primary btn-block">Punjab Engineering College(PEC)</a></small
+          >
+        </div>
+      </div>
+
+      <div class="card_box">
+        <a href="https://api.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from Chitkara University" target="_blank"
+          ><img
+            class="card-img-top .img"
+            src="./images/Other/Chitkara.jpg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="https://api.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from Chitkara University" target="_blank" class="btn btn-primary btn-block">Chitkara University</a></small
+          >
+        </div>
+      </div>
+      <div class="card_box">
+        <a href="https://api.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from LPU" target="_blank"
+          ><img
+            class="card-img-top .img"
+            src="./images/Other/lpu.jpg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="https://api.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from LPU" target="_blank" class="btn btn-primary btn-block"> LPU</a></small
+          >
+        </div>
+      </div>
+      <div class="card_box">
+        <a href="https://api.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from BIT Mesra" target="_blank"
+          ><img
+            class="card-img-top .img"
+            src="./images/Other/Bit_Mesra.jpg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="https://api.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from BIT Mesra" target="_blank" class="btn btn-primary btn-block">BIT Mesra</a></small
+          >
+        </div>
+      </div>
+      <div class="card_box">
+        <a href="https://api.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from Chandigarh University(CU)" target="_blank"
+          ><img
+            class="card-img-top .img"
+            src="./images/Other/cu.jpeg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="https://api.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from Chandigarh University(CU)" target="_blank" class="btn btn-primary btn-block"> Chandigarh University(CU)</a></small
+          >
+        </div>
+      </div>
+      <div class="card_box">
+        <a href="https://api.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from Delhi University(DU)" target="_blank"
+          ><img
+            class="card-img-top .img"
+            src="./images/Other/du.jpg"
+            alt="Card image cap"
+        /></a>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Card title</h5> -->
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">
+            <a href="https://api.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from Delhi University(DU)" target="_blank" class="btn btn-primary btn-block"> Delhi University(DU)</a></small
+          >
+        </div>
+      </div>
+    </div>
+    <section id="AboutUs"><br /><br /><br /><br />
+      <h2 class="titless" style="background-color: cadetblue;" id="AboutUs">About Us</h2>
+        <section class="text-gray-600 body-font">
+            
+            <div class="container px-5 py-24 mx-auto">
+              <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-gray-400 mb-8" viewBox="0 0 975.036 975.036">
+                  <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+                </svg>
+                <p class="leading-relaxed text-lg Aboutt" >Eduu Buddy is a one stop solution to all your college admission related doubts and ambiguities. We help you connect with the students of IIT's, NIT's and many such prestigious colleges on just a single click!</p>
+                <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
+                <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm alll">All The Best</h2>
+                <p class="text-gray-500">Team Eduubuddy</p>
+              </div>
+            </div>
+          </section>
+       </section>
+    <h2 class="titless" style="background-color: cadetblue">
+      Our Achievements
+    </h2>
+    <section class="text-gray-600 body-font">
+      
+      <div class="flex flex-wrap -m-4 text-center">
+        <div class="p-4 md:w-1/3 sm:w-1/2 w-full">
+          <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-cadetblue-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
+            </svg>
+            <h2 class="title-font font-medium text-3xl text-gray-900 counter100">0</h2>
+            <p class="leading-relaxed">IITians onboard</p>
+          </div>
+        </div>
+        <div class="p-4 md:w-1/3 sm:w-1/2 w-full">
+          <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-cadetblue-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
+            </svg>
+            <h2 class="title-font font-medium text-3xl text-gray-900 counter200">0</h2>
+            <p class="leading-relaxed">NITians onboard</p>
+          </div>
+        </div>
+        <div class="p-4 md:w-1/3 sm:w-1/2 w-full">
+          <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-cadetblue-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+              <path d="M3 18v-6a9 9 0 0118 0v6"></path>
+              <path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"></path>
+            </svg>
+            <h2 class="title-font font-medium text-3xl text-gray-900 counter1">0</h2>
+            <p class="leading-relaxed">Active users</p>
+          </div>
+        </div>
+        
+        </div>
+      </div>
+    </div>
+  </section>
+    <footer class="text-gray-600 body-font">
+      <div
+        class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col"
+      >
+        <a
+          class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+        >
+          <img
+            src="./images/IIT/eduubuddy logo.png"
+            class="w-14 h-12 rounded-full"
+          />
+          <span class="ml-3 text-xl">EduuBuddy</span>
+        </a>
+        <p
+          class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"
+        >
+          © 2022 EduuBuddy —
+          <a
+            href="https://twitter.com/knyttneve"
+            class="text-gray-600 ml-1"
+            rel="noopener noreferrer"
+            target="_blank"
+            >@Founders of EduuBuddy</a
+          >
+        </p>
+        <span
+          class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start"
+        >
+          <a class="text-gray-500">
+            <svg
+              fill="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+              ></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            <svg
+              fill="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+              ></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+            >
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path
+                d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
+              ></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500">
+            <svg
+              fill="currentColor"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="0"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="none"
+                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+              ></path>
+              <circle cx="4" cy="4" r="2" stroke="none"></circle>
+            </svg>
+          </a>
+        </span>
+      </div>
+    </footer>
+    <footer style="background-color: rgb(9, 9, 36); text-align: center; padding: 10px ; color: white;">Made in India with ❤️</footer>
+    <!--     
+    <div class='block'><a href="https://api.whatsapp.com/send?phone=918505092662&text=I want to connect with a student from IIT Madras"
+    target="_blank"><img src="/IIT/IIT_Madras_Logo.svg" class="img"> </a><br /><button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" >IIT Madras</button></div>
+    -->
+    <script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
+

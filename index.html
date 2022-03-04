@@ -26,12 +26,24 @@
 	<title>EduuBuddy</title>
 	<style>
 
-        body,html{
-            margin:0px;
-        }
+    body,html{
+        margin:0px;
+    }
+
 		#moreText {
 			display: none;
 		}
+
+
+    .navbaratag{
+      color:white;
+      font-size: 20px;
+    }
+
+    .navbaratag:hover{
+      color:black;
+      text-decoration: underline;
+    }
 
 		.block {
 			display: inline-block;
@@ -47,6 +59,9 @@
 			width: 90%;
 			height: 86%;
 		}
+    .alll{
+      font-size: 1rem;
+    }
 
 		#textButton {
 			font-weight: bold;
@@ -56,17 +71,44 @@
 			font-weight: bold;
 		}
 
+    .centercontent{
+      text-align: center;
+    }
+
 		#moreTextNIT {
 			display: none;
 		}
+
+    .mt-4{
+      margin-top:0rem !important;;
+    }
+
+    .py-24{
+      padding-top:2rem !important;
+    }
 
 		.titless {
 			text-align: center;
 		}
 
+    .fullwidth{
+      display: block;
+      width:100%;
+      text-align: center;
+    }
+
 		h2{
 			font-weight:bold;
 		}
+
+    .removecolor:hover{
+      color:#1A202C;
+      text-decoration: none;
+    }
+
+    .Aboutt{
+      font-size: 1.5rem;
+    }
 
 		.round{
 			background-color: blue;
@@ -95,6 +137,19 @@
           left: 5%;
         }
 
+        .dropdown-menu {
+          left: -110% !important;
+        }
+
+        .positioncontact{
+          margin-top:0px !important;
+        }
+
+        .dropdown-item:hover {
+          background-color: green;
+        }
+
+
         .ml-3 {
           text-align: center;
         }
@@ -112,17 +167,17 @@
       class="container mx-auto flex flex-wrap flex-row md:flex-row items-center justify-between"
     >
       <div style="padding-left: 60px; padding-top: 5px;">
-          <a
+          <a 
           href="./index.html"
-          class="flex title-font font-medium items-center text-gray-900 md:mb-0"
+          class="flex title-font font-medium items-center text-gray-900 md:mb-0 removecolor"
         >
           <img
             src="./images/IIT/eduubuddy logo.png"
             class="w-14 h-12 rounded-full"
           />
           <span class="ml-3 text"
-            >Welcome to<br />
-            <h2>EduuBuddy</h2></span
+          >Welcome to<br />
+          <h2>EduuBuddy</h2></span
           >
         </a>
       </div>
@@ -153,8 +208,9 @@
           </svg>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="./IIT.html">IIT</a>
-          <a class="dropdown-item" href="./NIT.html">NIT</a>
+          <a class="dropdown-item " href="./iit.html">IITs</a>
+          <a class="dropdown-item" href="./nit.html">NITs</a>
+          <a class="dropdown-item" href="./other.html">Other colleges</a>
           <a class="dropdown-item" href="#">About us</a>
           <a class="dropdown-item" href="#">Contact us</a>
         </div>
@@ -163,23 +219,31 @@
       <nav
         class="md:ml-auto flex flex-wrap items-center text-base justify-center"
       >
-        <a href="./index.html" class="mr-5 hover:text-gray-900"> Home</a>
+        <a href="./index.html" class="mr-5 hover:text-gray-900 navbaratag"> Home</a>
         <a
           target="_blank"
           href="./IIT.html"
-          class="mr-5 hover:text-gray-900"
-          >IITians</a
+          class="mr-5 hover:text-gray-900 navbaratag"
+          >IITs</a
         >
         <a
           target="_blank"
           href="./NIT.html"
-          class="mr-5 hover:text-gray-900"
-          >NITians</a
+          class="mr-5 hover:text-gray-900 navbaratag"
+          >NITs</a
         >
-        <a href="#Aboutus" class="mr-5 hover:text-gray-900">About Us</a>
+        
+        <a
+          target="_blank"
+          href="./other.html"
+          class="mr-5 hover:text-gray-900 navbaratag"
+          >Others</a
+        >
+       
+        <a href="#AboutUs" class="mr-5 hover:text-gray-900 navbaratag">About Us</a>
       </nav>
       <button
-        class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
+        class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0 positioncontact"
         onclick="window.location.href='https://web.whatsapp.com/send?phone=918505092662';"
       >
         Contact Us
@@ -207,93 +271,51 @@
         <section class="text-gray-600 body-font">
           <div class="container px-5 py-24 mx-auto">
             <div class="flex flex-wrap -m-4">
-              <div style="text-align: center;" class="p-4 md:w-1/3">
+              <div style="text-align: justify;" class="p-4 md:w-1/3">
                 <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                  <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://dummyimage.com/720x400" alt="blog">
+                  <a
+                    href="./iit.html">
+                    
+                  <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="./images/1.jpg" alt="blog">
+                  </a>
                   <div class="p-6">
-                    <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
-                    <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The Catalyzer</h1>
-                    <p class="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-                    <div class="flex items-center flex-wrap ">
-                      <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
-                        <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M5 12h14"></path>
-                          <path d="M12 5l7 7-7 7"></path>
-                        </svg>
-                      </a>
-                      <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
-                        <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                          <circle cx="12" cy="12" r="3"></circle>
-                        </svg>1.2K
-                      </span>
-                      <span class="text-gray-400 inline-flex items-center leading-none text-sm">
-                        <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                          <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
-                        </svg>6
-                      </span>
-                    </div>
-                    <button  type="button" class="btn btn-primary">Connect</button>
+                    
+                    <h1 style="text-align: center;" class="title-font text-lg font-medium text-gray-900 mb-3" >Indian Institute of Technology(IIT)</h1>
+                    <p class="leading-relaxed mb-3">Connect with a mentor from any IIT of your choice on a single click! Ask them questions about their preparation, their college life or anything for that matter.
+                    </p>
+                   <div class="fullwidth">
+                    <a href="./iit.html"></a><button  type="button" class="btn btn-primary centercontent">Connect</button></a>
+                   </div>
                   </div>
                 </div>
               </div>
-              <div style="text-align: center;" class="p-4 md:w-1/3">
+              <div style="text-align: justify;" class="p-4 md:w-1/3">
                 <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                  <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://dummyimage.com/721x401" alt="blog">
+                  <a href="./nit.html">
+                    <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="./images/3.webp" alt="blog"></a>
                   <div class="p-6">
-                    <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
-                    <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The 400 Blows</h1>
-                    <p class="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-                    <div class="flex items-center flex-wrap">
-                      <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
-                        <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M5 12h14"></path>
-                          <path d="M12 5l7 7-7 7"></path>
-                        </svg>
-                      </a>
-                      <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
-                        <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                          <circle cx="12" cy="12" r="3"></circle>
-                        </svg>1.2K
-                      </span>
-                      <span class="text-gray-400 inline-flex items-center leading-none text-sm">
-                        <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                          <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
-                        </svg>6
-                      </span>
+                    
+                    <h1 style="text-align: center;" class="title-font text-lg font-medium text-gray-900 mb-3">National Institute of Technology(NIT)</h1>
+                    <p class="leading-relaxed mb-3">Connect with a mentor from any NIT of your choice on a single click! Ask them questions about their preparation, their college life or anything for that matter.
+                    </p>
+                    <div class="fullwidth">
+                      <a href="./nit.html"> <button  type="button" class="btn btn-primary centercontent">Connect</button></a>
                     </div>
-                    <button  type="button" class="btn btn-primary">Connect</button>
                   </div>                
                 </div>
               </div>
-              <div style="text-align: center;" class="p-4 md:w-1/3">
+              <div  class="p-4 md:w-1/3">
                 <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                  <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="./images/1.jpg" alt="blog">
+                  <a href="./other.html">
+                    <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="./images/2.webp" alt="blog">
+                  </a>
                   <div class="p-6">
-                    <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
-                    <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1>
-                    <p class="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-                    <div class="flex items-center flex-wrap ">
-                      <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
-                        <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M5 12h14"></path>
-                          <path d="M12 5l7 7-7 7"></path>
-                        </svg>
-                      </a>
-                      <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
-                        <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                          <circle cx="12" cy="12" r="3"></circle>
-                        </svg>1.2K
-                      </span>
-                      <span class="text-gray-400 inline-flex items-center leading-none text-sm">
-                        <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                          <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
-                        </svg>6
-                      </span>
+                    <h1 style="text-align: center;" class="title-font text-lg font-medium text-gray-900 mb-3">Other Engineering Colleges</h1>
+                    <p style="text-align: justified;" class="leading-relaxed mb-3">Connect with the mentors from other colleges like IIITs, BITS and many more prestigious institutions like this to know more about their preparation story and current college life!</p>
+                   
+                    <div class="fullwidth">
+                      <a href="./other.html"><button  type="button" class="btn btn-primary centercontent">Connect</button></a>
                     </div>
-                    <button  type="button" class="btn btn-primary">Connect</button>
                   </div>
                 </div>
               </div>
@@ -306,7 +328,7 @@
                  
 
 			
-        <h2 class="titless" style="background-color: cadetblue;">About Us</h2>
+        <h2 class="titless" style="background-color: cadetblue;" id="AboutUs">About Us</h2>
         <section class="text-gray-600 body-font">
             
             <div class="container px-5 py-24 mx-auto">
@@ -314,41 +336,60 @@
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-gray-400 mb-8" viewBox="0 0 975.036 975.036">
                   <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
                 </svg>
-                <p class="leading-relaxed text-lg">Now Connect with IITians/Nitians and ask their JEE experience.</p>
+                <p class="leading-relaxed text-lg Aboutt" >Eduu Buddy is a one stop solution to all your college admission related doubts and ambiguities. We help you connect with the students of IIT's, NIT's and many such prestigious colleges on just a single click!</p>
                 <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
-                <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">All The Best</h2>
+                <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm alll">All The Best</h2>
                 <p class="text-gray-500">Team Eduubuddy</p>
               </div>
             </div>
           </section>
 	</div>
     <h2 class="titless" style="background-color: cadetblue;">Our Achievements</h2>
+    <br>
+    <br>
     <section class="text-gray-600 body-font">
-        <div id="Aboutus" class="container px-5 py-24 mx-auto">
-          <div class="flex flex-wrap -m-4 text-center">
-            <div class="p-4 sm:w-1/4 w-1/2">
-              <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">200+</h2>
-              <p class="leading-relaxed">IITians</p>
-            </div>
-            <div class="p-4 sm:w-1/4 w-1/2">
-              <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">330+</h2>
-              <p class="leading-relaxed">NITians</p>
-            </div>
-            <div class="p-4 sm:w-1/4 w-1/2">
-              <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">3K+</h2>
-              <p class="leading-relaxed">Customers</p>
-            </div>
-            <div class="p-4 sm:w-1/4 w-1/2">
-              <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900"></h2>
-              <br />
-              <br />
-              
-              <p class="leading-relaxed">More to come...</p>
+      
+        <div class="flex flex-wrap -m-4 text-center">
+          <div class="p-4 md:w-1/3 sm:w-1/2 w-full">
+            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-cadetblue-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
+              </svg>
+              <h2 class="title-font font-medium text-3xl text-gray-900 counter100">0</h2>
+              <p class="leading-relaxed">IITians onboard</p>
             </div>
           </div>
+          <div class="p-4 md:w-1/3 sm:w-1/2 w-full">
+            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-cadetblue-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
+              </svg>
+              <h2 class="title-font font-medium text-3xl text-gray-900 counter200">0</h2>
+              <p class="leading-relaxed">NITians onboard</p>
+            </div>
+          </div>
+          <div class="p-4 md:w-1/3 sm:w-1/2 w-full">
+            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-cadetblue-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
+                <path d="M3 18v-6a9 9 0 0118 0v6"></path>
+                <path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"></path>
+              </svg>
+              <h2 class="title-font font-medium text-3xl text-gray-900 counter1">0</h2>
+              <p class="leading-relaxed">Active users</p>
+            </div>
+          </div>
+          
+          </div>
         </div>
-        <hr>
-      </section>
+      </div>
+    </section>
+    <br>
+    <br>
+    
       <footer class="text-gray-600 body-font">
         <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
 			<a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
@@ -384,6 +425,8 @@
           </span>
         </div>
       </footer>
+    </footer>
+    <footer style="background-color: rgb(9, 9, 36); text-align: center; padding: 10px ; color: white;">Made in India with ❤️</footer>
 
 
 
@@ -433,6 +476,12 @@
 			}
 		}
 	</script>
+
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="index.js"></script>
 
 </body>
 
